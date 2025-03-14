@@ -1,0 +1,103 @@
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fdfdfd;
+}
+
+header {
+  position: fixed;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0.5em 0.8em;
+  width: 100%;
+  top: 0;
+  box-shadow: 0.1em 0.1em 0.6em lightgrey;
+  background-color: #f9f9f9;
+}
+
+header a {
+  margin-right: 0.8em;
+}
+
+header .logo {
+  width: 14em;
+  margin-left: 1em;
+}
+
+header .login-btn,
+.start-btn {
+  font-size: 15pt;
+  text-decoration: none;
+  color: inherit;
+  padding: 0.15em 0.7em;
+  text-align: center;
+}
+
+header .login-btn {
+  font-weight: 500;
+  margin-left: auto;
+  border: 0.1em solid transparent;
+  border-radius: 0.45em;
+}
+
+header .login-btn:hover {
+  border: 0.1em solid #f2f0f7;
+  background-color: #f2f0f7;
+}
+
+header .start-btn {
+  margin-right: 2.5em;
+}
+
+.start-btn {
+  font-weight: 700;
+  border: 0.1em solid #8b53ff;
+  border-radius: 0.45em;
+  background-color: #8b53ff;
+  color: white;
+}
+
+.start-btn:hover {
+  border: 0.1em solid #ca6de8;
+  background-color: #ca6de8;
+}
+
+main {
+  overflow-y: auto;
+  margin: 7em 1em 1em 1em;
+}
+
+#heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 5em;
+}
+
+h1 {
+  font-size: 40pt;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+#app-description {
+  font-size: 15pt;
+  font-weight: 500;
+  color: grey;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+main .start-btn {
+  font-size: 20pt;
+}
+
+/* 
+colors
+light: ca6de8
+middle: 8b53ff
+dark: 422cb3 
+*/
