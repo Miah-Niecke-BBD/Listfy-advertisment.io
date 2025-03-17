@@ -210,7 +210,10 @@ h3 {
 
 #faq details {
   font-weight: var(--font-weight-bold);
+  background-color:#eadfff;
   border-bottom: 0.1em solid var(--primary-color);
+  border-radius: var(--button-border-radius);
+  transition: border 0.3s ease; 
 }
 
 #faq details[open] {
@@ -224,12 +227,17 @@ h3 {
   background-color:#eadfff;
   list-style: none;
   padding: var(--spacing-medium);
+  border-radius: var(--button-border-radius);
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 #faq details summary::after {
   content: "⌄";
+  text-align: center;
   margin-left: auto;
   font-size: var(--font-size-small);
+  transition: transform 0.3s ease;
 }
 
 #faq details[open] summary {
@@ -238,6 +246,7 @@ h3 {
 }
 
 #faq details p {
+  color: var(--heading-purple);
   padding: var(--spacing-medium);
 }
 
