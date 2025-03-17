@@ -5,12 +5,19 @@
   --light-purple: #ca6de8;
   --heading-purple: #1e1466;
   --background-color: #fdfdfd;
+  --button-hover-bg: #f2f0f7;
+  --card-bg: #e0d5e3;
+  --faq-bg: #eadfff;
+  --light-text-color: grey;
+  --white-color: white;
 
   /* Spacing */
   --spacing-small: 0.5em;
   --spacing-medium: 1em;
   --spacing-large: 2em;
   --section-padding: 3em;
+  --card-padding: 2.5em;
+  --button-padding: 0.15em 0.7em;
 
   /* Font sizes */
   --font-size-small: 15pt;
@@ -22,7 +29,7 @@
 
   /* Buttons */
   --button-border-radius: 0.45em;
-  --button-padding: 0.15em 0.7em;
+  --button-border: 0.1em solid transparent;
 }
 
 body {
@@ -42,7 +49,7 @@ header {
   width: 100%;
   top: 0;
   box-shadow: 0.1em 0.1em 0.6em lightgrey;
-  background-color: #f9f9f9;
+  background-color: var(--white-color);
   z-index: 1000;
 }
 
@@ -67,13 +74,13 @@ header .login-btn,
 header .login-btn {
   font-weight: var(--font-weight-regular);
   margin-left: auto;
-  border: 0.1em solid transparent;
+  border: var(--button-border);
   border-radius: var(--button-border-radius);
 }
 
 header .login-btn:hover {
-  border: 0.1em solid #f2f0f7;
-  background-color: #f2f0f7;
+  border: 0.1em solid var(--button-hover-bg);
+  background-color: var(--button-hover-bg);
 }
 
 header .start-btn {
@@ -85,7 +92,7 @@ header .start-btn {
   border: 0.1em solid var(--primary-color);
   border-radius: var(--button-border-radius);
   background-color: var(--primary-color);
-  color: white;
+  color: var(--white-color);
 }
 
 .start-btn:hover {
@@ -113,7 +120,7 @@ h1 {
 #app-description {
   font-size: var(--font-size-small);
   font-weight: var(--font-weight-regular);
-  color: grey;
+  color: var(--light-text-color);
   text-align: center;
   margin-bottom: 4rem;
 }
@@ -136,10 +143,10 @@ main .start-btn {
 
 .card {
   text-align: center;
-  background-color: #e0d5e3;
-  border: 0 solid transparent;
+  background-color: var(--card-bg);
+  border: var(--button-border);
   border-radius: 0.8em;
-  padding: 2.5em;
+  padding: var(--card-padding);
   margin: 1.5em;
   max-width: 20%;
   overflow-wrap: break-word;
@@ -168,6 +175,10 @@ main .start-btn {
   padding: var(--section-padding);
 }
 
+#how-it-works h2 {
+  font-size: var(--font-size-large);
+}
+
 #how-it-works h2,
 h3 {
   color: var(--heading-purple);
@@ -190,8 +201,8 @@ h3 {
   max-width: 55em;
   padding: var(--spacing-large);
   border-radius: 1em;
-  background-color: white;
-  box-shadow: 0em 1em 3em #e0d5e3;
+  background-color: var(--white-color);
+  box-shadow: 0em 1em 3em var(--card-bg);
 }
 
 #faq {
@@ -203,6 +214,7 @@ h3 {
 }
 
 #faq h2 {
+  font-size: var(--font-size-large);
   color: var(--heading-purple);
   text-align: center;
   margin-bottom: var(--spacing-medium);
@@ -210,10 +222,10 @@ h3 {
 
 #faq details {
   font-weight: var(--font-weight-bold);
-  background-color:#eadfff;
+  background-color: var(--faq-bg);
   border-bottom: 0.1em solid var(--primary-color);
   border-radius: var(--button-border-radius);
-  transition: border 0.3s ease; 
+  transition: border 0.3s ease;
 }
 
 #faq details[open] {
@@ -224,7 +236,7 @@ h3 {
   display: flex;
   align-items: center;
   color: var(--primary-color);
-  background-color:#eadfff;
+  background-color: var(--faq-bg);
   list-style: none;
   padding: var(--spacing-medium);
   border-radius: var(--button-border-radius);
@@ -242,7 +254,7 @@ h3 {
 
 #faq details[open] summary {
   background-color: var(--primary-color);
-  color: white;
+  color: var(--white-color);
 }
 
 #faq details p {
@@ -254,7 +266,7 @@ h3 {
   text-align: center;
   padding: var(--section-padding);
   background-color: var(--light-purple);
-  color: white;
+  color: var(--white-color);
 }
 
 input,
@@ -270,9 +282,9 @@ button {
   padding: var(--button-padding);
   text-align: center;
   font-weight: var(--font-weight-bold);
-  border: 0.1em solid white;
+  border: 0.1em solid var(--white-color);
   border-radius: var(--button-border-radius);
-  background-color: white;
+  background-color: var(--white-color);
   color: var(--dark-purple);
 }
 
@@ -292,6 +304,7 @@ footer {
 }
 
 footer p {
+  color: var(--heading-purple);
   margin: 0;
   font-size: var(--font-size-small);
 }
