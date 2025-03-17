@@ -1,9 +1,36 @@
+:root {
+  /* Colors */
+  --primary-color: #8b53ff;
+  --dark-purple: #422cb3;
+  --light-purple: #ca6de8;
+  --heading-purple: #1e1466;
+  --background-color: #fdfdfd;
+
+  /* Spacing */
+  --spacing-small: 0.5em;
+  --spacing-medium: 1em;
+  --spacing-large: 2em;
+  --section-padding: 3em;
+
+  /* Font sizes */
+  --font-size-small: 15pt;
+  --font-size-medium: 20pt;
+  --font-size-large: 25pt;
+  --font-size-heading: 40pt;
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+
+  /* Buttons */
+  --button-border-radius: 0.45em;
+  --button-padding: 0.15em 0.7em
+}
+
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #fdfdfd;
+  background-color: var(--background-color);
 }
 
 header {
@@ -11,7 +38,7 @@ header {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding: 0.5em 0.8em;
+  padding: var(--spacing-small) 0.8em;
   width: 100%;
   top: 0;
   box-shadow: 0.1em 0.1em 0.6em lightgrey;
@@ -24,23 +51,23 @@ header a {
 
 header .logo {
   width: 14em;
-  margin-left: 1em;
+  margin-left: var(--spacing-medium);
 }
 
 header .login-btn,
 .start-btn {
-  font-size: 15pt;
+  font-size: var(--font-size-small);
   text-decoration: none;
   color: inherit;
-  padding: 0.15em 0.7em;
+  padding: var(--button-padding);
   text-align: center;
 }
 
 header .login-btn {
-  font-weight: 500;
+  font-weight: var(--font-weight-regular);
   margin-left: auto;
   border: 0.1em solid transparent;
-  border-radius: 0.45em;
+  border-radius: var(--button-border-radius);
 }
 
 header .login-btn:hover {
@@ -53,16 +80,16 @@ header .start-btn {
 }
 
 .start-btn {
-  font-weight: 700;
-  border: 0.1em solid #8b53ff;
-  border-radius: 0.45em;
-  background-color: #8b53ff;
+  font-weight: var(--font-weight-bold);
+  border: 0.1em solid var(--primary-color);
+  border-radius: var(--button-border-radius);
+  background-color: var(--primary-color);
   color: white;
 }
 
 .start-btn:hover {
-  border: 0.1em solid #ca6de8;
-  background-color: #ca6de8;
+  border: 0.1em solid var(--light-purple);
+  background-color: var(--light-purple);
 }
 
 main {
@@ -77,21 +104,21 @@ main {
 }
 
 h1 {
-  font-size: 40pt;
+  font-size: var(--font-size-heading);
   text-align: center;
   margin-bottom: 0;
 }
 
 #app-description {
-  font-size: 15pt;
-  font-weight: 500;
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-regular);
   color: grey;
   text-align: center;
   margin-bottom: 4rem;
 }
 
 main .start-btn {
-  font-size: 20pt;
+  font-size: var(--font-size-medium);
 }
 
 #features {
@@ -120,32 +147,37 @@ main .start-btn {
 .feature-img {
   width: 100%;
   max-width: 15em;
-  border: 0.1em solid #422cb3;
-  border-radius: 1em;
+  border: 0.1em solid var(--dark-purple);
+  border-radius: var(--spacing-medium);
 }
 
 #features h2 {
   margin-top: 3em;
-  font-size: 25pt;
-  color: #1e1466;
+  font-size: var(--font-size-large);
+  color: var(--heading-purple);
 }
 
 #how-it-works {
   text-align: center;
-  padding: 3em;
-  background: linear-gradient(to bottom, #fdfdfd 0%, #f7f3ff 50%, #8b53ff 100%);
+  padding: var(--section-padding);
+  background: linear-gradient(
+    to bottom,
+    var(--background-color) 0%,
+    #f7f3ff 50%,
+    var(--primary-color) 100%
+  );
 }
 
 #how-it-works h2,
 h3 {
-  color: #1e1466;
+  color: var(--heading-purple);
 }
 
 #steps-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2em;
+  gap: var(--spacing-large);
   width: 80%;
   margin: 0 auto;
 }
@@ -155,44 +187,48 @@ h3 {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  max-width: 800px;
-  padding: 2em;
-  border-radius: 10px;
+  max-width: 55em;
+  padding: var(--spacing-large);
+  border-radius: 1em;
   background-color: white;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0em 1em 4em rgba(0, 0, 0, 0.1);
 }
 
 #newsletter {
   text-align: center;
-  padding: 3em;
-  background-color: #8b53ff;
+  padding: var(--section-padding);
+  background-color: var(--primary-color);
   color: white;
 }
 
 input,
 button {
-  padding: 0.5em;
-  margin: 0.5em;
-  border-radius: 5px;
+  padding: var(--spacing-small);
+  margin: var(--spacing-small);
+  border-radius: var(--button-border-radius);
 }
 
 #get-started {
   color: white;
-  background: linear-gradient(to bottom, #8b53ff 0%, #422cb3 100%);
+  background: linear-gradient(
+    to bottom,
+    var(--primary-color) 0%,
+    var(--dark-purple) 100%
+  );
   text-align: center;
-  padding: 2em;
+  padding: var(--spacing-large);
 }
 
 .start-btn-light {
-  font-size: 20pt;
+  font-size: var(--font-size-medium);
   text-decoration: none;
-  padding: 0.15em 0.7em;
+  padding: var(--button-padding);
   text-align: center;
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
   border: 0.1em solid white;
-  border-radius: 0.45em;
+  border-radius: var(--button-border-radius);
   background-color: white;
-  color: #422cb3;
+  color: var(--dark-purple);
 }
 
 #newsletter .start-btn-light {
@@ -204,19 +240,20 @@ button {
 }
 
 footer {
-  background-color: #422cb3;
+  background-color: var(--dark-purple);
   color: white;
   text-align: center;
   justify-content: center;
-  font-size: 15pt;
-  padding: 0.5em 1em 0.2em 1em;
+  font-size: var(--font-size-small);
+  padding: var(--spacing-small) var(--spacing-medium) 0.2em
+    var(--spacing-medium);
 }
 
 /* Animations */
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(0.8em);
   }
   to {
     opacity: 1;
@@ -229,13 +266,16 @@ section {
 }
 
 @media (max-width: 600px) {
+  h1 {
+    font-size: 30pt;
+  }
   #features-board {
     flex-direction: column;
     align-items: center;
   }
   .card {
     max-width: 60%;
-    margin: 1em 0;
+    margin: var(--spacing-medium) 0;
   }
 }
 
@@ -258,7 +298,7 @@ section {
 
   header .login-btn,
   header .start-btn {
-    padding: 0.1em 1em;
+    padding: 0.1em var(--spacing-medium);
   }
 
   header .login-btn {
