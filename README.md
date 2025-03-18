@@ -1,8 +1,8 @@
-# Listify-Advertisement.io  
+# listify-marketing.io  
 Advertisement website for **Listify**, a powerful task management tool.  
 
 ## 🌐 Live Website  
-[View here](https://miah-niecke-bbd.github.io/Listfy-advertisment.io/)  
+[View here](https://miah-niecke-bbd.github.io/listfy-marketing.io/)  
 
 ## 🔹 About Listify  
 Stay organized and boost productivity with **Listify**—a simple yet powerful task management app.  
