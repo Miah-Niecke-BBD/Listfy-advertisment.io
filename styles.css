@@ -16,7 +16,7 @@
   --spacing-medium: 1em;
   --spacing-large: 2em;
   --section-padding: 3em;
-  --card-padding: 2.5em;
+  --card-padding: 1.5em;
   --button-padding: 0.15em 0.7em;
 
   /* Font sizes */
@@ -150,6 +150,7 @@ main .start-btn {
   margin: 1.5em;
   max-width: 20%;
   overflow-wrap: break-word;
+  min-width: 18em;
 }
 
 .card:hover {
@@ -356,7 +357,8 @@ section {
     align-items: center;
   }
   .card {
-    max-width: 60%;
+    flex-wrap: wrap;
+    min-width: none;
     margin: var(--spacing-medium) 0;
   }
 }
